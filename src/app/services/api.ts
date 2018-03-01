@@ -7,7 +7,7 @@ export class Api {
 
     }
     options = new RequestOptions({withCredentials: true});
-    apiRoot = document.domain === 'localhost' ? 'http://localhost:5000/api' : 'https://netmongo.bckbtn.com/api'
+    apiRoot = false ? 'http://localhost:5000/api' : 'https://tracer-lol.herokuapp.com/api'
 
     public registerUser(email: string, password: string, confirmPassword: string) {
         let user = { email, password, confirmPassword };
