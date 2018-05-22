@@ -14,6 +14,8 @@ import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import { AppComponent } from './components/app/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { PlayerComponent } from './components/player/player.component';
+import { ObjNgFor } from './components/player/player.component';
 import { AccountComponent } from './components/account/account.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SignInComponent } from './components/signin/signin.component';
@@ -24,8 +26,10 @@ import { SignInComponent } from './components/signin/signin.component';
         RegisterComponent,
         SignInComponent,
         TodoComponent,
+        PlayerComponent,
         AccountComponent,
-        HomeComponent
+        HomeComponent,
+        ObjNgFor
     ],
     imports: [
         BrowserModule,
@@ -41,6 +45,7 @@ import { SignInComponent } from './components/signin/signin.component';
             { path: 'register', component: RegisterComponent },
             { path: 'signin', component: SignInComponent },
             { path: 'todo', component: TodoComponent },
+            { path: 'player/:userName', component: PlayerComponent },
             { path: 'account', component: AccountComponent },
             { path: '**', redirectTo: '' }
         ])

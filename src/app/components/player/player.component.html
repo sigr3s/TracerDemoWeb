@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>Player info of: {{summonerName}}</h3>
+
+    <div class="table-responsive">
+      <table class="table">
+          <tr>
+            <th> Champion </th>
+            <th *ngFor="let st of stats[0].stats | ObjNgFor">
+                <div *ngIf="st.key != 'id'">
+                    {{st.key}}
+                </div>
+            </th>
+          </tr>
+          <tr *ngFor="let champion of stats">
+              <td>
+                {{champion.championName}}
+              </td>
+              <td *ngFor="let st of champion.stats | ObjNgFor">
+                  <div *ngIf="st.key != 'id'">
+                      {{champion.stats[st.key]}}
+                  </div>
+              </td>
+
+            </tr>
+      </table>
+    </div>
+</div>
+
+

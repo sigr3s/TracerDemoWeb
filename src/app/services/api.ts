@@ -72,6 +72,10 @@ export class Api {
       return this._client.post(this.apiRoot + '/v1/team/'+teamName +'/addPlayerBySummoner/' + summonerName,content,  this.options);
     }
 
+    public GetSummoner(summonerName:string){
+      return this._client.get(this.apiRoot + '/v1/summoner/'+ summonerName,  this.options);
+    }
+
 
 
 }
